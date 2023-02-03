@@ -9,10 +9,10 @@
             $this->name = $name;
         }
         function setDescription($description){
-            $this->description; = $description;
+            $this->description = $description;
         }
         function setPrice($price){
-            $this->price; = 4price;
+            $this->price = $price;
         }
 
         function getName(){

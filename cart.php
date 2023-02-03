@@ -6,22 +6,23 @@
         private $cartItems = array ();
 
         function addTocart($item){
-            $this->cartItems[] = $items;
+            $this->cartItems[] = $item;
         }
         function viewCart(){
             $arrCartItems = $this->cartItems;
-            foreach ($arrCartItems as $key => $items){
+            foreach ($arrCartItems as $key => $item){
                 echo
-                '<ul>
-                    <li>Name: ' . $Item->getName() . '</li>
-                    <li>Description: ' . $Item->getDescription() . '</li>
+                '
+                <ul>
+                    <li>Name: ' . $item->getName() . '</li>
+                    <li>Description: ' . $item->getDescription() . '</li>
                     <li>Price:  ₱ ' . number_format($item->getPrice(), 2) . '</li>
-                    <li>Dose: ' . $Item->getDose() . '</li>
-                    <li>Type: ' . $Item->getType() . '</li>
-                    <li>Exp Date: ' . $Item->getExpirationDate() . '</li>
-                    <li>SRP: ' . $Item->computeSRP() . '</li>
-                </ul>'
-                '<hr>'; 
+                    <li>Dose: ' . $item->getDose() . '</li>
+                    <li>Type: ' . $item->getType() . '</li>
+                    <li>Exp Date: ' . $item->getExpirationDate() . '</li>
+                    <li>SRP: ' . $item->computeSRP() . '</li>
+                </ul>
+                <hr>'; 
             }
         }
         function computeTotal(){
