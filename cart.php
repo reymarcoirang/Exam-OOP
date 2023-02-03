@@ -15,7 +15,7 @@
                 '<ul>
                     <li>Name: ' . $Item->getName() . '</li>
                     <li>Description: ' . $Item->getDescription() . '</li>
-                    <li>Price: ' . number_format($item->getPrice(), 2) . '</li>
+                    <li>Price:  ₱ ' . number_format($item->getPrice(), 2) . '</li>
                     <li>Dose: ' . $Item->getDose() . '</li>
                     <li>Type: ' . $Item->getType() . '</li>
                     <li>Exp Date: ' . $Item->getExpirationDate() . '</li>
@@ -29,7 +29,7 @@
             foreach($this->cartItems as $key => $item){
                 $totalprice += $Value->computeSRP();
             }
-            echo '<b>Total Cart Amount: </b> ' . number_format($total,2);
+            echo '<b>Total Cart Amount: </b>  ₱ ' . number_format($total,2);
         }
     }
 
